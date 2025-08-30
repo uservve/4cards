@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*
+### Primary
+
+- Red: #ea5353ff
+- Cyan: #45d3d3ff
+- Orange: #fcaf4aff
+- Blue: #549ef2ff
+
+### Neutral
+
+- Grey 500: #4c4e61ff
+- Grey 400: #697077ff
+- White: #ffffffff
+
+*/
+body{
+    background-color: #f5f7fa;
+    text-align: center;
+    padding: 20px;
+}
+
+
+.text{
+    margin-top: 70px;
+    width: 100%;
+
+}
+.h1{
+    font-size: 40px;
+    color: #697077ff;
+    margin-bottom: 10px;
+    font-weight: 100;
+}
+.h12{
+    font-size: 40px;
+    color: #4c4e61ff;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+p{
+    color: #697077ff;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 40px;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 50px;
+}
+    
+.card{
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.card h2{
+    margin-bottom: 10px;
+    color: #4c4e61ff;
+}
+.team {
+    grid-row: span 2 / span 2;
+    grid-column-start: 2;
+    border-top: #ea5353ff 5px solid;
+}
+
+.karma {
+    grid-row: span 2 / span 2;
+    grid-column-start: 2;
+    grid-row-start: 3;
+    margin-top: -70px;
+      border-top: #fcaf4aff 5px solid;
+    
+}
+
+.calc{
+    grid-row: span 2 / span 2;
+    grid-column-start: 3;
+    grid-row-start: 2;
+     border-top: #549ef2ff 5px solid; 
+}
+.super {
+    grid-row: span 2 / span 2;
+    grid-column-start: 1;
+    grid-row-start: 2;
+      border-top: #45d3d3ff 5px solid;
+}
+img{
+ width: 64px;
+ align-self: self-end;
+
+}
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+        gap: 20px;
+    }
+    .team, .karma, .calc, .super {
+        grid-column: span 1 / span 1;
+        grid-row: span 1 / span 1;
+        margin-top: 0;
+    }
+}
